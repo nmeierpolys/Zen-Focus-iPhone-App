@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B429EFF41488A4E4009C3AF3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429EFF31488A4E4009C3AF3 /* UIKit.framework */; };
+		B429EFF61488A4E4009C3AF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429EFF51488A4E4009C3AF3 /* Foundation.framework */; };
+		B429EFF81488A4E4009C3AF3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429EFF71488A4E4009C3AF3 /* CoreGraphics.framework */; };
+		B429EFFE1488A4E4009C3AF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B429EFFC1488A4E4009C3AF3 /* InfoPlist.strings */; };
+		B429F0001488A4E4009C3AF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B429EFFF1488A4E4009C3AF3 /* main.m */; };
+		B429F0041488A4E4009C3AF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B429F0031488A4E4009C3AF3 /* AppDelegate.m */; };
+		B429F0071488A4E4009C3AF3 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B429F0051488A4E4009C3AF3 /* MainStoryboard_iPhone.storyboard */; };
+		B429F00A1488A4E4009C3AF3 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B429F0081488A4E4009C3AF3 /* MainStoryboard_iPad.storyboard */; };
+		B429F00D1488A4E4009C3AF3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B429F00C1488A4E4009C3AF3 /* ViewController.m */; };
+		B429F0151488A4E4009C3AF3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429F0141488A4E4009C3AF3 /* SenTestingKit.framework */; };
+		B429F0161488A4E4009C3AF3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429EFF31488A4E4009C3AF3 /* UIKit.framework */; };
+		B429F0171488A4E4009C3AF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429EFF51488A4E4009C3AF3 /* Foundation.framework */; };
+		B429F01F1488A4E4009C3AF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B429F01D1488A4E4009C3AF3 /* InfoPlist.strings */; };
+		B429F0221488A4E4009C3AF3 /* Zen_FocusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B429F0211488A4E4009C3AF3 /* Zen_FocusTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B429F0181488A4E4009C3AF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B429EFE61488A4E3009C3AF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B429EFEE1488A4E4009C3AF3;
+			remoteInfo = "Zen Focus";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B429EFEF1488A4E4009C3AF3 /* Zen Focus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zen Focus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B429EFF31488A4E4009C3AF3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B429EFF51488A4E4009C3AF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B429EFF71488A4E4009C3AF3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B429EFFB1488A4E4009C3AF3 /* Zen Focus-Info.plist */ = {isa = PBXFileReference; path = "Zen Focus-Info.plist"; sourceTree = "<group>"; };
+		B429EFFD1488A4E4009C3AF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B429EFFF1488A4E4009C3AF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B429F0011488A4E4009C3AF3 /* Zen Focus-Prefix.pch */ = {isa = PBXFileReference; path = "Zen Focus-Prefix.pch"; sourceTree = "<group>"; };
+		B429F0021488A4E4009C3AF3 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		B429F0031488A4E4009C3AF3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B429F0061488A4E4009C3AF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		B429F0091488A4E4009C3AF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		B429F00B1488A4E4009C3AF3 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		B429F00C1488A4E4009C3AF3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B429F0131488A4E4009C3AF3 /* Zen FocusTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Zen FocusTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B429F0141488A4E4009C3AF3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B429F01C1488A4E4009C3AF3 /* Zen FocusTests-Info.plist */ = {isa = PBXFileReference; path = "Zen FocusTests-Info.plist"; sourceTree = "<group>"; };
+		B429F01E1488A4E4009C3AF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B429F0201488A4E4009C3AF3 /* Zen_FocusTests.h */ = {isa = PBXFileReference; path = Zen_FocusTests.h; sourceTree = "<group>"; };
+		B429F0211488A4E4009C3AF3 /* Zen_FocusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zen_FocusTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B429EFEC1488A4E4009C3AF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B429EFF41488A4E4009C3AF3 /* UIKit.framework in Frameworks */,
+				B429EFF61488A4E4009C3AF3 /* Foundation.framework in Frameworks */,
+				B429EFF81488A4E4009C3AF3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B429F00F1488A4E4009C3AF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B429F0151488A4E4009C3AF3 /* SenTestingKit.framework in Frameworks */,
+				B429F0161488A4E4009C3AF3 /* UIKit.framework in Frameworks */,
+				B429F0171488A4E4009C3AF3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B429EFE41488A4E3009C3AF3 = {
+			isa = PBXGroup;
+			children = (
+				B429EFF91488A4E4009C3AF3 /* Zen Focus */,
+				B429F01A1488A4E4009C3AF3 /* Zen FocusTests */,
+				B429EFF21488A4E4009C3AF3 /* Frameworks */,
+				B429EFF01488A4E4009C3AF3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B429EFF01488A4E4009C3AF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B429EFEF1488A4E4009C3AF3 /* Zen Focus.app */,
+				B429F0131488A4E4009C3AF3 /* Zen FocusTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B429EFF21488A4E4009C3AF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B429EFF31488A4E4009C3AF3 /* UIKit.framework */,
+				B429EFF51488A4E4009C3AF3 /* Foundation.framework */,
+				B429EFF71488A4E4009C3AF3 /* CoreGraphics.framework */,
+				B429F0141488A4E4009C3AF3 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B429EFF91488A4E4009C3AF3 /* Zen Focus */ = {
+			isa = PBXGroup;
+			children = (
+				B429F0021488A4E4009C3AF3 /* AppDelegate.h */,
+				B429F0031488A4E4009C3AF3 /* AppDelegate.m */,
+				B429F0051488A4E4009C3AF3 /* MainStoryboard_iPhone.storyboard */,
+				B429F0081488A4E4009C3AF3 /* MainStoryboard_iPad.storyboard */,
+				B429F00B1488A4E4009C3AF3 /* ViewController.h */,
+				B429F00C1488A4E4009C3AF3 /* ViewController.m */,
+				B429EFFA1488A4E4009C3AF3 /* Supporting Files */,
+			);
+			path = "Zen Focus";
+			sourceTree = "<group>";
+		};
+		B429EFFA1488A4E4009C3AF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B429EFFB1488A4E4009C3AF3 /* Zen Focus-Info.plist */,
+				B429EFFC1488A4E4009C3AF3 /* InfoPlist.strings */,
+				B429EFFF1488A4E4009C3AF3 /* main.m */,
+				B429F0011488A4E4009C3AF3 /* Zen Focus-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B429F01A1488A4E4009C3AF3 /* Zen FocusTests */ = {
+			isa = PBXGroup;
+			children = (
+				B429F0201488A4E4009C3AF3 /* Zen_FocusTests.h */,
+				B429F0211488A4E4009C3AF3 /* Zen_FocusTests.m */,
+				B429F01B1488A4E4009C3AF3 /* Supporting Files */,
+			);
+			path = "Zen FocusTests";
+			sourceTree = "<group>";
+		};
+		B429F01B1488A4E4009C3AF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B429F01C1488A4E4009C3AF3 /* Zen FocusTests-Info.plist */,
+				B429F01D1488A4E4009C3AF3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B429EFEE1488A4E4009C3AF3 /* Zen Focus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B429F0251488A4E4009C3AF3 /* Build configuration list for PBXNativeTarget "Zen Focus" */;
+			buildPhases = (
+				B429EFEB1488A4E4009C3AF3 /* Sources */,
+				B429EFEC1488A4E4009C3AF3 /* Frameworks */,
+				B429EFED1488A4E4009C3AF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Zen Focus";
+			productName = "Zen Focus";
+			productReference = B429EFEF1488A4E4009C3AF3 /* Zen Focus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B429F0121488A4E4009C3AF3 /* Zen FocusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B429F0281488A4E4009C3AF3 /* Build configuration list for PBXNativeTarget "Zen FocusTests" */;
+			buildPhases = (
+				B429F00E1488A4E4009C3AF3 /* Sources */,
+				B429F00F1488A4E4009C3AF3 /* Frameworks */,
+				B429F0101488A4E4009C3AF3 /* Resources */,
+				B429F0111488A4E4009C3AF3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B429F0191488A4E4009C3AF3 /* PBXTargetDependency */,
+			);
+			name = "Zen FocusTests";
+			productName = "Zen FocusTests";
+			productReference = B429F0131488A4E4009C3AF3 /* Zen FocusTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B429EFE61488A4E3009C3AF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = B429EFE91488A4E3009C3AF3 /* Build configuration list for PBXProject "Zen Focus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B429EFE41488A4E3009C3AF3;
+			productRefGroup = B429EFF01488A4E4009C3AF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B429EFEE1488A4E4009C3AF3 /* Zen Focus */,
+				B429F0121488A4E4009C3AF3 /* Zen FocusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B429EFED1488A4E4009C3AF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B429EFFE1488A4E4009C3AF3 /* InfoPlist.strings in Resources */,
+				B429F0071488A4E4009C3AF3 /* MainStoryboard_iPhone.storyboard in Resources */,
+				B429F00A1488A4E4009C3AF3 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B429F0101488A4E4009C3AF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B429F01F1488A4E4009C3AF3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B429F0111488A4E4009C3AF3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B429EFEB1488A4E4009C3AF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B429F0001488A4E4009C3AF3 /* main.m in Sources */,
+				B429F0041488A4E4009C3AF3 /* AppDelegate.m in Sources */,
+				B429F00D1488A4E4009C3AF3 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B429F00E1488A4E4009C3AF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B429F0221488A4E4009C3AF3 /* Zen_FocusTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B429F0191488A4E4009C3AF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B429EFEE1488A4E4009C3AF3 /* Zen Focus */;
+			targetProxy = B429F0181488A4E4009C3AF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B429EFFC1488A4E4009C3AF3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B429EFFD1488A4E4009C3AF3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B429F0051488A4E4009C3AF3 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B429F0061488A4E4009C3AF3 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		B429F0081488A4E4009C3AF3 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B429F0091488A4E4009C3AF3 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		B429F01D1488A4E4009C3AF3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B429F01E1488A4E4009C3AF3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B429F0231488A4E4009C3AF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B429F0241488A4E4009C3AF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B429F0261488A4E4009C3AF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zen Focus/Zen Focus-Prefix.pch";
+				INFOPLIST_FILE = "Zen Focus/Zen Focus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B429F0271488A4E4009C3AF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zen Focus/Zen Focus-Prefix.pch";
+				INFOPLIST_FILE = "Zen Focus/Zen Focus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B429F0291488A4E4009C3AF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Zen Focus.app/Zen Focus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zen Focus/Zen Focus-Prefix.pch";
+				INFOPLIST_FILE = "Zen FocusTests/Zen FocusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B429F02A1488A4E4009C3AF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Zen Focus.app/Zen Focus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Zen Focus/Zen Focus-Prefix.pch";
+				INFOPLIST_FILE = "Zen FocusTests/Zen FocusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B429EFE91488A4E3009C3AF3 /* Build configuration list for PBXProject "Zen Focus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B429F0231488A4E4009C3AF3 /* Debug */,
+				B429F0241488A4E4009C3AF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B429F0251488A4E4009C3AF3 /* Build configuration list for PBXNativeTarget "Zen Focus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B429F0261488A4E4009C3AF3 /* Debug */,
+				B429F0271488A4E4009C3AF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B429F0281488A4E4009C3AF3 /* Build configuration list for PBXNativeTarget "Zen FocusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B429F0291488A4E4009C3AF3 /* Debug */,
+				B429F02A1488A4E4009C3AF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B429EFE61488A4E3009C3AF3 /* Project object */;
+}
