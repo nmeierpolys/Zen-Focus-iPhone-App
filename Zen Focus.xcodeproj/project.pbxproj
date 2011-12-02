@@ -21,6 +21,7 @@
 		B429F0171488A4E4009C3AF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429EFF51488A4E4009C3AF3 /* Foundation.framework */; };
 		B429F01F1488A4E4009C3AF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B429F01D1488A4E4009C3AF3 /* InfoPlist.strings */; };
 		B429F0221488A4E4009C3AF3 /* Zen_FocusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B429F0211488A4E4009C3AF3 /* Zen_FocusTests.m */; };
+		B429F02C1488A5F8009C3AF3 /* zen-wallpaper-7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B429F02B1488A5F8009C3AF3 /* zen-wallpaper-7.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +39,23 @@
 		B429EFF31488A4E4009C3AF3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B429EFF51488A4E4009C3AF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B429EFF71488A4E4009C3AF3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B429EFFB1488A4E4009C3AF3 /* Zen Focus-Info.plist */ = {isa = PBXFileReference; path = "Zen Focus-Info.plist"; sourceTree = "<group>"; };
+		B429EFFB1488A4E4009C3AF3 /* Zen Focus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Zen Focus-Info.plist"; sourceTree = "<group>"; };
 		B429EFFD1488A4E4009C3AF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B429EFFF1488A4E4009C3AF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B429F0011488A4E4009C3AF3 /* Zen Focus-Prefix.pch */ = {isa = PBXFileReference; path = "Zen Focus-Prefix.pch"; sourceTree = "<group>"; };
-		B429F0021488A4E4009C3AF3 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		B429F0011488A4E4009C3AF3 /* Zen Focus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Zen Focus-Prefix.pch"; sourceTree = "<group>"; };
+		B429F0021488A4E4009C3AF3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B429F0031488A4E4009C3AF3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B429F0061488A4E4009C3AF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		B429F0091488A4E4009C3AF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		B429F00B1488A4E4009C3AF3 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		B429F00B1488A4E4009C3AF3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B429F00C1488A4E4009C3AF3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B429F0131488A4E4009C3AF3 /* Zen FocusTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Zen FocusTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B429F0141488A4E4009C3AF3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		B429F01C1488A4E4009C3AF3 /* Zen FocusTests-Info.plist */ = {isa = PBXFileReference; path = "Zen FocusTests-Info.plist"; sourceTree = "<group>"; };
+		B429F01C1488A4E4009C3AF3 /* Zen FocusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Zen FocusTests-Info.plist"; sourceTree = "<group>"; };
 		B429F01E1488A4E4009C3AF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B429F0201488A4E4009C3AF3 /* Zen_FocusTests.h */ = {isa = PBXFileReference; path = Zen_FocusTests.h; sourceTree = "<group>"; };
+		B429F0201488A4E4009C3AF3 /* Zen_FocusTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Zen_FocusTests.h; sourceTree = "<group>"; };
 		B429F0211488A4E4009C3AF3 /* Zen_FocusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zen_FocusTests.m; sourceTree = "<group>"; };
+		B429F02B1488A5F8009C3AF3 /* zen-wallpaper-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zen-wallpaper-7.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		B429EFFA1488A4E4009C3AF3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B429F02B1488A5F8009C3AF3 /* zen-wallpaper-7.jpg */,
 				B429EFFB1488A4E4009C3AF3 /* Zen Focus-Info.plist */,
 				B429EFFC1488A4E4009C3AF3 /* InfoPlist.strings */,
 				B429EFFF1488A4E4009C3AF3 /* main.m */,
@@ -227,6 +230,7 @@
 				B429EFFE1488A4E4009C3AF3 /* InfoPlist.strings in Resources */,
 				B429F0071488A4E4009C3AF3 /* MainStoryboard_iPhone.storyboard in Resources */,
 				B429F00A1488A4E4009C3AF3 /* MainStoryboard_iPad.storyboard in Resources */,
+				B429F02C1488A5F8009C3AF3 /* zen-wallpaper-7.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
