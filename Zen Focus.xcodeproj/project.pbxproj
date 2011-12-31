@@ -22,6 +22,8 @@
 		B429F01F1488A4E4009C3AF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B429F01D1488A4E4009C3AF3 /* InfoPlist.strings */; };
 		B429F0221488A4E4009C3AF3 /* Zen_FocusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B429F0211488A4E4009C3AF3 /* Zen_FocusTests.m */; };
 		B429F02C1488A5F8009C3AF3 /* zen-wallpaper-7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B429F02B1488A5F8009C3AF3 /* zen-wallpaper-7.jpg */; };
+		F165698614AF9A2B000B2C63 /* better.png in Resources */ = {isa = PBXBuildFile; fileRef = F165698514AF9A2B000B2C63 /* better.png */; };
+		F165698914AF9A33000B2C63 /* play2.png in Resources */ = {isa = PBXBuildFile; fileRef = F165698814AF9A33000B2C63 /* play2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		B429F0201488A4E4009C3AF3 /* Zen_FocusTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Zen_FocusTests.h; sourceTree = "<group>"; };
 		B429F0211488A4E4009C3AF3 /* Zen_FocusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zen_FocusTests.m; sourceTree = "<group>"; };
 		B429F02B1488A5F8009C3AF3 /* zen-wallpaper-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zen-wallpaper-7.jpg"; sourceTree = "<group>"; };
+		F165698514AF9A2B000B2C63 /* better.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = better.png; path = "../../iPhone Dev/Zen/better.png"; sourceTree = "<group>"; };
+		F165698814AF9A33000B2C63 /* play2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play2.png; path = "../../iPhone Dev/Zen/play2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				B429F02B1488A5F8009C3AF3 /* zen-wallpaper-7.jpg */,
+				F165698514AF9A2B000B2C63 /* better.png */,
+				F165698814AF9A33000B2C63 /* play2.png */,
 				B429EFFB1488A4E4009C3AF3 /* Zen Focus-Info.plist */,
 				B429EFFC1488A4E4009C3AF3 /* InfoPlist.strings */,
 				B429EFFF1488A4E4009C3AF3 /* main.m */,
@@ -231,6 +237,8 @@
 				B429F0071488A4E4009C3AF3 /* MainStoryboard_iPhone.storyboard in Resources */,
 				B429F00A1488A4E4009C3AF3 /* MainStoryboard_iPad.storyboard in Resources */,
 				B429F02C1488A5F8009C3AF3 /* zen-wallpaper-7.jpg in Resources */,
+				F165698614AF9A2B000B2C63 /* better.png in Resources */,
+				F165698914AF9A33000B2C63 /* play2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +455,7 @@
 				B429F0271488A4E4009C3AF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B429F0281488A4E4009C3AF3 /* Build configuration list for PBXNativeTarget "Zen FocusTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +464,7 @@
 				B429F02A1488A4E4009C3AF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

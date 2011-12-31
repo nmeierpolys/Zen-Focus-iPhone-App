@@ -16,7 +16,7 @@
     NSTimeInterval remainingTime;
     NSTimeInterval interval;
     
-    NSDate *endingInstant;
+    NSDate *endingInstant; 
     NSDate *startingInstant;
 }
 

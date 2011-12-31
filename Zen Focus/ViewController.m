@@ -10,11 +10,11 @@
 #import <QuartzCore/QuartzCore.h>
 
 @implementation ViewController
-@synthesize taskView;
-@synthesize textTime;
-@synthesize imageBackground;
-@synthesize viewControls;
-@synthesize textTask;
+@synthesize taskView = _taskView;
+@synthesize textTime = _textTime;
+@synthesize imageBackground = _imageBackground;
+@synthesize viewControls = _viewControls;
+@synthesize textTask = _textTask;
 
 - (void)didReceiveMemoryWarning
 {
@@ -37,11 +37,11 @@
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTimeField) userInfo:nil repeats:YES];
     
     taskPrompt = @"What will you do?";
-    textTime.text = [self timeTextFromInterval:interval];
-    taskView.layer.cornerRadius = 5;
-    textTask.layer.cornerRadius = 5;
-    textTask.layer.borderColor = [UIColor grayColor].CGColor;
-    textTask.layer.borderWidth = 1.0f;
+    
+    self.textTime.text = [self timeTextFromInterval:interval];
+    self.textTask.layer.cornerRadius = 5;
+    self.textTask.layer.borderColor = [UIColor grayColor].CGColor;
+    self.textTask.layer.borderWidth = 1.0f;
 }
 - (void)viewDidUnload
 {
@@ -90,25 +90,6 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    //if(interfaceOrientation == UIInterfaceOrientationPortrait)
-    //    return NO;
-    //else if(interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
-    //    return NO;
-    //else
-    //    return YES;
-    
-    //CGRect newRect;
-    
-    //if(interfaceOrientation == UIInterfaceOrientationPortrait){
-    //     newRect = CGRectMake(141,150,678,300);  //x,y,width,height
-    //} else {
-    //    newRect = CGRectMake(193,150,574,320);  //x,y,width,height
-    //}
-    
-    //UIImageView *imageView = [[UIImageView alloc] initWithFrame:newRect];
-    //[imageView setImage:imageBackground.image];
-    //imageBackground = imageView;
-    
     return YES;
 }
 
@@ -118,16 +99,18 @@
         toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
     {
         //Landscape
-        imageBackground.frame = CGRectMake(193,150,574,320);
-        textTask.frame = CGRectMake(240,150,344,109);
-        viewControls.frame = CGRectMake(240,262,243,73);
+        //self.imageBackground.frame = CGRectMake(193,150,574,320);
+        //self.textTask.frame = CGRectMake(240,150,344,109);
+        //self.viewControls.frame = CGRectMake(240,262,243,73);
+        self.textTask.frame = CGRectMake(self.textTask.frame.origin.x, self.textTask.frame.origin.y, self.textTask.frame.size.width, self.textTask.frame.size.height / 2);
     }
     else
     {
         //Portrait
-        imageBackground.frame = CGRectMake(61,230,518,460);
-        textTask.frame = CGRectMake(140,62,280,124);
-        viewControls.frame = CGRectMake(160,392,243,73);
+        //self.imageBackground.frame = CGRectMake(61,230,518,460);
+        //self.textTask.frame = CGRectMake(140,62,280,124);
+        //self.viewControls.frame = CGRectMake(160,392,243,73);
+        self.textTask.frame = CGRectMake(self.textTask.frame.origin.x, self.textTask.frame.origin.y, self.textTask.frame.size.width, self.textTask.frame.size.height * 2);
     }
 }
 
@@ -140,7 +123,7 @@
         numMinutes = 25;
     
     interval = numMinutes * 60;
-    textTime.text = [self timeTextFromInterval:interval];
+    self.textTime.text = [self timeTextFromInterval:interval];
 }
 
 - (void)updateTimeField {
@@ -149,13 +132,13 @@
     
     if(remainingTime <= 0)
     {
-        textTime.text = [self timeTextFromInterval:0];
+        self.textTime.text = [self timeTextFromInterval:0];
         updateTimer = NO;
         return;
     }
     
     remainingTime = remainingTime - 1;
-    textTime.text = [self timeTextFromInterval:remainingTime];
+    self.textTime.text = [self timeTextFromInterval:remainingTime];
 }
 
 - (NSString *)timeTextFromInterval:(NSTimeInterval)timeInterval{
@@ -176,7 +159,7 @@
         NSDate *fireDate = [[NSDate alloc] initWithTimeIntervalSinceNow:remainingTime];
         
         localNotification.fireDate = fireDate;
-        localNotification.alertBody = [NSString stringWithFormat:@"Task: %@\nTime's up, take a break",   textTask.text];
+        localNotification.alertBody = [NSString stringWithFormat:@"Task: %@\nTime's up, take a break",   self.textTask.text];
         [[UIApplication sharedApplication] scheduleLocalNotification:localNotification]; 
         
     } else {
@@ -191,7 +174,7 @@
 
 - (IBAction)buttonReset:(id)sender {
     remainingTime = interval;
-    textTime.text = [self timeTextFromInterval:interval];
+    self.textTime.text = [self timeTextFromInterval:interval];
     updateTimer = NO;
 }
 
