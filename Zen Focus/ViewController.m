@@ -83,7 +83,7 @@
     
     if(!updateTimer)
         return;
-    //Test change for github
+    //Test change for github - 2
     //restore instant when the task should expire
     remainingTime = [endingInstant timeIntervalSinceNow];
 }
