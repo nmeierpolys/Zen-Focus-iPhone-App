@@ -25,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *textTime;
 @property (weak, nonatomic) IBOutlet UIImageView *imageBackground;
 @property (weak, nonatomic) IBOutlet UIView *viewControls;
+@property (weak, nonatomic) IBOutlet UILabel *restartLabel;
+@property (weak, nonatomic) IBOutlet UILabel *playLabel;
 
 - (IBAction)buttonReset:(id)sender;
 - (IBAction)buttonStart:(id)sender;
@@ -34,6 +36,9 @@
 - (void)enteringBackground;
 - (void)enteringForeground;
 - (void)loadDefaults;
+- (void)fadeCaptionsIn;
+- (void)fadeCaptionsOut;
+- (void)fadeCaptionsOutTimer;
 
 - (NSString *)timeTextFromInterval:(NSTimeInterval)interval;
 

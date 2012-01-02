@@ -9,12 +9,22 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
+@interface ViewController()
+
+@property (nonatomic) bool textIsEmpty;
+
+@end
+
 @implementation ViewController
 @synthesize taskView = _taskView;
 @synthesize textTime = _textTime;
 @synthesize imageBackground = _imageBackground;
 @synthesize viewControls = _viewControls;
+@synthesize restartLabel = _restartLabel;
+@synthesize playLabel = _playLabel;
 @synthesize textTask = _textTask;
+
+@synthesize textIsEmpty = _textIsEmpty;
 
 - (void)didReceiveMemoryWarning
 {
@@ -42,6 +52,9 @@
     self.textTask.layer.cornerRadius = 5;
     self.textTask.layer.borderColor = [UIColor grayColor].CGColor;
     self.textTask.layer.borderWidth = 1.0f;
+    
+    [self fadeCaptionsIn];
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval: 3.0 target:self selector:@selector(fadeCaptionsOutTimer:) userInfo:nil repeats: NO];
 }
 - (void)viewDidUnload
 {
@@ -50,6 +63,8 @@
     [self setTaskView:nil];
     [self setImageBackground:nil];
     [self setViewControls:nil];
+    [self setRestartLabel:nil];
+    [self setPlayLabel:nil];
     [super viewDidUnload];
 }
 - (void)viewWillAppear:(BOOL)animated{
@@ -99,9 +114,6 @@
         toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
     {
         //Landscape
-        //self.imageBackground.frame = CGRectMake(193,150,574,320);
-        //self.textTask.frame = CGRectMake(240,150,344,109);
-        //self.viewControls.frame = CGRectMake(240,262,243,73);
         self.textTask.frame = CGRectMake(self.textTask.frame.origin.x, 
                                          self.textTask.frame.origin.y-20, 
                                          self.textTask.frame.size.width, 
@@ -115,9 +127,6 @@
     else
     {
         //Portrait
-        //self.imageBackground.frame = CGRectMake(61,230,518,460);
-        //self.textTask.frame = CGRectMake(140,62,280,124);
-        //self.viewControls.frame = CGRectMake(160,392,243,73);
         self.textTask.frame = CGRectMake(self.textTask.frame.origin.x, 
                                          self.textTask.frame.origin.y+20, 
                                          self.textTask.frame.size.width, 
@@ -129,6 +138,27 @@
                                                 525);
     }
 }
+
+- (void)fadeCaptionsOut{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:1.0];
+    self.restartLabel.alpha = 0;
+    self.playLabel.alpha = 0;
+    [UIView commitAnimations];
+}
+
+- (void)fadeCaptionsIn{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:.5];
+    self.restartLabel.alpha = 1;
+    self.playLabel.alpha = 1;
+    [UIView commitAnimations];
+}
+
+-(void) fadeCaptionsOutTimer: (NSTimer *)theTimer {
+    [self fadeCaptionsOut];
+}
+
 
 // ======== Real logic methods ========
 - (void) loadDefaults {
@@ -167,19 +197,6 @@
 
 // ======== Button events ========
 - (IBAction)buttonStart:(id)sender {  
-    NSString *logMsg = [NSString stringWithFormat:@"Text origin: %g, %g",self.textTask.frame.origin.x,self.textTask.frame.origin.y];
-    NSLog(logMsg);
-    
-    logMsg = [NSString stringWithFormat:@"Image origin: %g, %g",self.imageBackground.frame.origin.x,self.imageBackground.frame.origin.y];
-    NSLog(logMsg);
-    
-    logMsg = [NSString stringWithFormat:@"View controls origin: %g, %g",self.viewControls.frame.origin.x,self.viewControls.frame.origin.y];
-    NSLog(logMsg);
-    
-    logMsg = [NSString stringWithFormat:@"Image size: %g, %g",self.imageBackground.frame.size.width,self.imageBackground.frame.size.height];
-    NSLog(logMsg);
-    
-    
     if(!updateTimer){  
         
         //Starting the timer - add a local alert notification for the end time
@@ -215,13 +232,21 @@
 
 // ======== Text view methods ========
 -(BOOL)textViewShouldBeginEditing:(UITextView *)editingTextView{
-    editingTextView.text = @"";
+    
+    //Clear it if we only have the default prompt showing.
+    if(self.textIsEmpty)
+       editingTextView.text = @"";
+    
     return YES;
 }
 
 - (void)textViewDidEndEditing:(UITextView *)editingTextView{
-    if([editingTextView.text isEqualToString:@""])
+    if([editingTextView.text isEqualToString:@""]) {
         editingTextView.text = taskPrompt;
+        self.textIsEmpty = YES;
+    } else {
+        self.textIsEmpty = NO;
+    }
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range 

@@ -16,10 +16,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="zen-wallpaper-008.jpg" id="OD2-R7-C79">
                                 <rect key="frame" x="-210" y="0.0" width="536" height="525"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Zen Focus" lineBreakMode="tailTruncation" minimumFontSize="10" id="ZAT-Rf-Ykc">
                                 <rect key="frame" x="101" y="41" width="118" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="Palatino-Italic" family="Palatino" pointSize="27"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.60999999999999999" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -30,6 +32,7 @@
                                 <rect key="frame" x="20" y="117" width="280" height="150"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                 <connections>
@@ -52,11 +55,11 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="poZ-Fd-M4a">
-                                <rect key="frame" x="63" y="399" width="194" height="42"/>
+                                <rect key="frame" x="44" y="398" width="233" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Zzu-O4-24i">
-                                        <rect key="frame" x="10" y="0.0" width="42" height="42"/>
+                                        <rect key="frame" x="26" y="0.0" width="42" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="better.png">
@@ -71,7 +74,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25:00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="aH0-hz-p3T">
-                                        <rect key="frame" x="64" y="5" width="66" height="31"/>
+                                        <rect key="frame" x="83" y="5" width="66" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.53014605978260865" green="0.53014605978260865" blue="0.53014605978260865" alpha="0.85999999999999999" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -79,7 +82,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sE8-gA-zCI">
-                                        <rect key="frame" x="141" y="0.0" width="49" height="42"/>
+                                        <rect key="frame" x="162" y="0.0" width="49" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Play" image="play2.png">
@@ -93,15 +96,32 @@
                                             <action selector="buttonStart:" destination="2" eventType="touchUpInside" id="XG8-UD-0dk"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Start/Stop" lineBreakMode="tailTruncation" minimumFontSize="10" id="75F-CA-8oM">
+                                        <rect key="frame" x="147" y="38" width="79" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Restart" lineBreakMode="tailTruncation" minimumFontSize="10" id="U1n-6P-wXy">
+                                        <rect key="frame" x="20" y="38" width="55" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="imageBackground" destination="OD2-R7-C79" id="QZ2-PV-9Yb"/>
+                        <outlet property="playLabel" destination="75F-CA-8oM" id="v40-E4-tN0"/>
+                        <outlet property="restartLabel" destination="U1n-6P-wXy" id="wGw-XO-P5W"/>
                         <outlet property="textTask" destination="RyT-1k-JFL" id="dhe-EZ-HVT"/>
                         <outlet property="textTime" destination="aH0-hz-p3T" id="aCI-Hf-XaZ"/>
                         <outlet property="viewControls" destination="poZ-Fd-M4a" id="ChF-VP-PJn"/>
@@ -123,6 +143,8 @@
                 <relationship kind="action" name="buttonReset:"/>
                 <relationship kind="action" name="buttonStart:"/>
                 <relationship kind="outlet" name="imageBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="playLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="restartLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="taskView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="textTask" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="textTime" candidateClass="UITextField"/>
