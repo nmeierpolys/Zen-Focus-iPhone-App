@@ -24,6 +24,7 @@
 		B429F02C1488A5F8009C3AF3 /* zen-wallpaper-7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B429F02B1488A5F8009C3AF3 /* zen-wallpaper-7.jpg */; };
 		F165698614AF9A2B000B2C63 /* better.png in Resources */ = {isa = PBXBuildFile; fileRef = F165698514AF9A2B000B2C63 /* better.png */; };
 		F165698914AF9A33000B2C63 /* play2.png in Resources */ = {isa = PBXBuildFile; fileRef = F165698814AF9A33000B2C63 /* play2.png */; };
+		F1BDFAB114B1298400633748 /* zen-wallpaper-008.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F1BDFAB014B1298400633748 /* zen-wallpaper-008.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		B429F02B1488A5F8009C3AF3 /* zen-wallpaper-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zen-wallpaper-7.jpg"; sourceTree = "<group>"; };
 		F165698514AF9A2B000B2C63 /* better.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = better.png; path = "../../iPhone Dev/Zen/better.png"; sourceTree = "<group>"; };
 		F165698814AF9A33000B2C63 /* play2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play2.png; path = "../../iPhone Dev/Zen/play2.png"; sourceTree = "<group>"; };
+		F1BDFAB014B1298400633748 /* zen-wallpaper-008.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zen-wallpaper-008.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				B429F02B1488A5F8009C3AF3 /* zen-wallpaper-7.jpg */,
+				F1BDFAB014B1298400633748 /* zen-wallpaper-008.jpg */,
 				F165698514AF9A2B000B2C63 /* better.png */,
 				F165698814AF9A33000B2C63 /* play2.png */,
 				B429EFFB1488A4E4009C3AF3 /* Zen Focus-Info.plist */,
@@ -239,6 +242,7 @@
 				B429F02C1488A5F8009C3AF3 /* zen-wallpaper-7.jpg in Resources */,
 				F165698614AF9A2B000B2C63 /* better.png in Resources */,
 				F165698914AF9A33000B2C63 /* play2.png in Resources */,
+				F1BDFAB114B1298400633748 /* zen-wallpaper-008.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

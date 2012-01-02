@@ -102,7 +102,15 @@
         //self.imageBackground.frame = CGRectMake(193,150,574,320);
         //self.textTask.frame = CGRectMake(240,150,344,109);
         //self.viewControls.frame = CGRectMake(240,262,243,73);
-        self.textTask.frame = CGRectMake(self.textTask.frame.origin.x, self.textTask.frame.origin.y, self.textTask.frame.size.width, self.textTask.frame.size.height / 2);
+        self.textTask.frame = CGRectMake(self.textTask.frame.origin.x, 
+                                         self.textTask.frame.origin.y-20, 
+                                         self.textTask.frame.size.width, 
+                                         self.textTask.frame.size.height / 2);
+        
+        self.imageBackground.frame = CGRectMake(self.imageBackground.frame.origin.x-85, 
+                                                self.imageBackground.frame.origin.y, 
+                                                775, 
+                                                315);
     }
     else
     {
@@ -110,7 +118,15 @@
         //self.imageBackground.frame = CGRectMake(61,230,518,460);
         //self.textTask.frame = CGRectMake(140,62,280,124);
         //self.viewControls.frame = CGRectMake(160,392,243,73);
-        self.textTask.frame = CGRectMake(self.textTask.frame.origin.x, self.textTask.frame.origin.y, self.textTask.frame.size.width, self.textTask.frame.size.height * 2);
+        self.textTask.frame = CGRectMake(self.textTask.frame.origin.x, 
+                                         self.textTask.frame.origin.y+20, 
+                                         self.textTask.frame.size.width, 
+                                         self.textTask.frame.size.height * 2);
+        
+        self.imageBackground.frame = CGRectMake(self.imageBackground.frame.origin.x+85, 
+                                                self.imageBackground.frame.origin.y, 
+                                                536, 
+                                                525);
     }
 }
 
@@ -151,6 +167,18 @@
 
 // ======== Button events ========
 - (IBAction)buttonStart:(id)sender {  
+    NSString *logMsg = [NSString stringWithFormat:@"Text origin: %g, %g",self.textTask.frame.origin.x,self.textTask.frame.origin.y];
+    NSLog(logMsg);
+    
+    logMsg = [NSString stringWithFormat:@"Image origin: %g, %g",self.imageBackground.frame.origin.x,self.imageBackground.frame.origin.y];
+    NSLog(logMsg);
+    
+    logMsg = [NSString stringWithFormat:@"View controls origin: %g, %g",self.viewControls.frame.origin.x,self.viewControls.frame.origin.y];
+    NSLog(logMsg);
+    
+    logMsg = [NSString stringWithFormat:@"Image size: %g, %g",self.imageBackground.frame.size.width,self.imageBackground.frame.size.height];
+    NSLog(logMsg);
+    
     
     if(!updateTimer){  
         
