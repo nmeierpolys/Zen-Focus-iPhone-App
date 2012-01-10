@@ -19,7 +19,7 @@
                                 <gestureRecognizers/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Zen Focus" lineBreakMode="tailTruncation" minimumFontSize="10" id="ZAT-Rf-Ykc">
-                                <rect key="frame" x="101" y="41" width="118" height="34"/>
+                                <rect key="frame" x="101" y="53" width="118" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="Palatino-Italic" family="Palatino" pointSize="27"/>
@@ -28,8 +28,8 @@
                                 <color key="shadowColor" white="0.66666666666666663" alpha="0.63" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000000000013" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="RyT-1k-JFL">
-                                <rect key="frame" x="20" y="117" width="280" height="150"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000000000013" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="center" id="RyT-1k-JFL">
+                                <rect key="frame" x="20" y="143" width="280" height="150"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -59,7 +59,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Zzu-O4-24i">
-                                        <rect key="frame" x="26" y="0.0" width="42" height="42"/>
+                                        <rect key="frame" x="26" y="-2" width="42" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="better.png">
@@ -73,16 +73,8 @@
                                             <action selector="buttonReset:" destination="2" eventType="touchUpInside" id="Wdl-Hv-CZg"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25:00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="aH0-hz-p3T">
-                                        <rect key="frame" x="83" y="5" width="66" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.53014605978260865" green="0.53014605978260865" blue="0.53014605978260865" alpha="0.85999999999999999" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sE8-gA-zCI">
-                                        <rect key="frame" x="162" y="0.0" width="49" height="42"/>
+                                        <rect key="frame" x="166" y="0.0" width="49" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Play" image="play2.png">
@@ -97,19 +89,27 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Start/Stop" lineBreakMode="tailTruncation" minimumFontSize="10" id="75F-CA-8oM">
-                                        <rect key="frame" x="147" y="38" width="79" height="21"/>
+                                        <rect key="frame" x="154" y="38" width="79" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="15"/>
                                         <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Restart" lineBreakMode="tailTruncation" minimumFontSize="10" id="U1n-6P-wXy">
-                                        <rect key="frame" x="20" y="38" width="55" height="21"/>
+                                        <rect key="frame" x="23" y="38" width="55" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="15"/>
                                         <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25:00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="aH0-hz-p3T">
+                                        <rect key="frame" x="80" y="5" width="73" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.53014605978260865" green="0.53014605978260865" blue="0.53014605978260865" alpha="0.85999999999999999" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="AppleGothic" family="AppleGothic" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -124,6 +124,7 @@
                         <outlet property="restartLabel" destination="U1n-6P-wXy" id="wGw-XO-P5W"/>
                         <outlet property="textTask" destination="RyT-1k-JFL" id="dhe-EZ-HVT"/>
                         <outlet property="textTime" destination="aH0-hz-p3T" id="aCI-Hf-XaZ"/>
+                        <outlet property="titleView" destination="ZAT-Rf-Ykc" id="Sau-1A-gnq"/>
                         <outlet property="viewControls" destination="poZ-Fd-M4a" id="ChF-VP-PJn"/>
                     </connections>
                 </viewController>
@@ -148,6 +149,7 @@
                 <relationship kind="outlet" name="taskView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="textTask" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="textTime" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="titleView" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="viewControls" candidateClass="UIView"/>
             </relationships>
         </class>

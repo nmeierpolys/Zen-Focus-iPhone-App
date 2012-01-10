@@ -22,9 +22,12 @@
 		B429F01F1488A4E4009C3AF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B429F01D1488A4E4009C3AF3 /* InfoPlist.strings */; };
 		B429F0221488A4E4009C3AF3 /* Zen_FocusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B429F0211488A4E4009C3AF3 /* Zen_FocusTests.m */; };
 		B429F02C1488A5F8009C3AF3 /* zen-wallpaper-7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B429F02B1488A5F8009C3AF3 /* zen-wallpaper-7.jpg */; };
+		F12AD7EB14BA0C6900CFCDAA /* Bonsai57.png in Resources */ = {isa = PBXBuildFile; fileRef = F12AD7EA14BA0C6900CFCDAA /* Bonsai57.png */; };
 		F165698614AF9A2B000B2C63 /* better.png in Resources */ = {isa = PBXBuildFile; fileRef = F165698514AF9A2B000B2C63 /* better.png */; };
 		F165698914AF9A33000B2C63 /* play2.png in Resources */ = {isa = PBXBuildFile; fileRef = F165698814AF9A33000B2C63 /* play2.png */; };
 		F1BDFAB114B1298400633748 /* zen-wallpaper-008.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F1BDFAB014B1298400633748 /* zen-wallpaper-008.jpg */; };
+		F1CF991814BA09CE00026FB1 /* Bonsai.png in Resources */ = {isa = PBXBuildFile; fileRef = F1CF991714BA09CE00026FB1 /* Bonsai.png */; };
+		F1CF992314BA0B4F00026FB1 /* Bonsai114.png in Resources */ = {isa = PBXBuildFile; fileRef = F1CF992214BA0B4F00026FB1 /* Bonsai114.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,9 +62,12 @@
 		B429F0201488A4E4009C3AF3 /* Zen_FocusTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Zen_FocusTests.h; sourceTree = "<group>"; };
 		B429F0211488A4E4009C3AF3 /* Zen_FocusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zen_FocusTests.m; sourceTree = "<group>"; };
 		B429F02B1488A5F8009C3AF3 /* zen-wallpaper-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zen-wallpaper-7.jpg"; sourceTree = "<group>"; };
+		F12AD7EA14BA0C6900CFCDAA /* Bonsai57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bonsai57.png; sourceTree = "<group>"; };
 		F165698514AF9A2B000B2C63 /* better.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = better.png; path = "../../iPhone Dev/Zen/better.png"; sourceTree = "<group>"; };
 		F165698814AF9A33000B2C63 /* play2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play2.png; path = "../../iPhone Dev/Zen/play2.png"; sourceTree = "<group>"; };
 		F1BDFAB014B1298400633748 /* zen-wallpaper-008.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zen-wallpaper-008.jpg"; sourceTree = "<group>"; };
+		F1CF991714BA09CE00026FB1 /* Bonsai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bonsai.png; sourceTree = "<group>"; };
+		F1CF992214BA0B4F00026FB1 /* Bonsai114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bonsai114.png; path = ../Bonsai114.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,9 @@
 				F1BDFAB014B1298400633748 /* zen-wallpaper-008.jpg */,
 				F165698514AF9A2B000B2C63 /* better.png */,
 				F165698814AF9A33000B2C63 /* play2.png */,
+				F1CF991714BA09CE00026FB1 /* Bonsai.png */,
+				F12AD7EA14BA0C6900CFCDAA /* Bonsai57.png */,
+				F1CF992214BA0B4F00026FB1 /* Bonsai114.png */,
 				B429EFFB1488A4E4009C3AF3 /* Zen Focus-Info.plist */,
 				B429EFFC1488A4E4009C3AF3 /* InfoPlist.strings */,
 				B429EFFF1488A4E4009C3AF3 /* main.m */,
@@ -243,6 +252,9 @@
 				F165698614AF9A2B000B2C63 /* better.png in Resources */,
 				F165698914AF9A33000B2C63 /* play2.png in Resources */,
 				F1BDFAB114B1298400633748 /* zen-wallpaper-008.jpg in Resources */,
+				F1CF991814BA09CE00026FB1 /* Bonsai.png in Resources */,
+				F1CF992314BA0B4F00026FB1 /* Bonsai114.png in Resources */,
+				F12AD7EB14BA0C6900CFCDAA /* Bonsai57.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UIView *viewControls;
 @property (weak, nonatomic) IBOutlet UILabel *restartLabel;
 @property (weak, nonatomic) IBOutlet UILabel *playLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleView;
 
 - (IBAction)buttonReset:(id)sender;
 - (IBAction)buttonStart:(id)sender;
@@ -39,6 +40,7 @@
 - (void)fadeCaptionsIn;
 - (void)fadeCaptionsOut;
 - (void)fadeCaptionsOutTimer;
+- (void)animateTextView:(bool)up;
 
 - (NSString *)timeTextFromInterval:(NSTimeInterval)interval;
 

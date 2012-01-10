@@ -22,6 +22,7 @@
 @synthesize viewControls = _viewControls;
 @synthesize restartLabel = _restartLabel;
 @synthesize playLabel = _playLabel;
+@synthesize titleView = _titleView;
 @synthesize textTask = _textTask;
 
 @synthesize textIsEmpty = _textIsEmpty;
@@ -47,6 +48,8 @@
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTimeField) userInfo:nil repeats:YES];
     
     taskPrompt = @"What will you do?";
+    self.textTask.text = taskPrompt; 
+    self.textIsEmpty = YES;
     
     self.textTime.text = [self timeTextFromInterval:interval];
     self.textTask.layer.cornerRadius = 5;
@@ -65,6 +68,7 @@
     [self setViewControls:nil];
     [self setRestartLabel:nil];
     [self setPlayLabel:nil];
+    [self setTitleView:nil];
     [super viewDidUnload];
 }
 - (void)viewWillAppear:(BOOL)animated{
@@ -115,27 +119,43 @@
     {
         //Landscape
         self.textTask.frame = CGRectMake(self.textTask.frame.origin.x, 
-                                         self.textTask.frame.origin.y-20, 
+                                         self.textTask.frame.origin.y-40, 
                                          self.textTask.frame.size.width, 
-                                         self.textTask.frame.size.height / 2);
+                                         self.textTask.frame.size.height-40);
         
         self.imageBackground.frame = CGRectMake(self.imageBackground.frame.origin.x-85, 
                                                 self.imageBackground.frame.origin.y, 
                                                 775, 
                                                 315);
+        self.titleView.frame = CGRectMake(self.titleView.frame.origin.x, 
+                                          self.titleView.frame.origin.y-25, 
+                                          self.titleView.frame.size.width, 
+                                          self.titleView.frame.size.height);
+        self.viewControls.frame = CGRectMake(self.viewControls.frame.origin.x, 
+                                             self.viewControls.frame.origin.y+5, 
+                                             self.viewControls.frame.size.width, 
+                                             self.viewControls.frame.size.height);
     }
     else
     {
         //Portrait
         self.textTask.frame = CGRectMake(self.textTask.frame.origin.x, 
-                                         self.textTask.frame.origin.y+20, 
+                                         self.textTask.frame.origin.y+40, 
                                          self.textTask.frame.size.width, 
-                                         self.textTask.frame.size.height * 2);
+                                         self.textTask.frame.size.height+40);
         
         self.imageBackground.frame = CGRectMake(self.imageBackground.frame.origin.x+85, 
                                                 self.imageBackground.frame.origin.y, 
                                                 536, 
                                                 525);
+        self.titleView.frame = CGRectMake(self.titleView.frame.origin.x, 
+                                          self.titleView.frame.origin.y+25, 
+                                          self.titleView.frame.size.width, 
+                                          self.titleView.frame.size.height);
+        self.viewControls.frame = CGRectMake(self.viewControls.frame.origin.x, 
+                                             self.viewControls.frame.origin.y-5, 
+                                             self.viewControls.frame.size.width, 
+                                             self.viewControls.frame.size.height);
     }
 }
 
@@ -152,6 +172,19 @@
     [UIView setAnimationDuration:.5];
     self.restartLabel.alpha = 1;
     self.playLabel.alpha = 1;
+    [UIView commitAnimations];
+}
+
+- (void)animateTextView: (bool)up{
+    [UIView setAnimationDelegate:self];
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.2];
+    [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+    if(up)
+        self.textTask.transform = CGAffineTransformMakeTranslation (0, -40);
+    else
+        self.textTask.transform = CGAffineTransformMakeTranslation (0, 0);
+    
     [UIView commitAnimations];
 }
 
@@ -225,14 +258,16 @@
 
 - (IBAction)buttonInfo:(id)sender {
     UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"Zen Focus" message:@"Create a task and get to it. It's as simple as that." delegate:self cancelButtonTitle:@"Got it" otherButtonTitles:nil,nil];
+    [self fadeCaptionsIn];
     [alert show];
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval: 3.0 target:self selector:@selector(fadeCaptionsOutTimer:) userInfo:nil repeats: NO];
 }
 
 
 
 // ======== Text view methods ========
 -(BOOL)textViewShouldBeginEditing:(UITextView *)editingTextView{
-    
+    [self animateTextView:YES];
     //Clear it if we only have the default prompt showing.
     if(self.textIsEmpty)
        editingTextView.text = @"";
@@ -241,6 +276,7 @@
 }
 
 - (void)textViewDidEndEditing:(UITextView *)editingTextView{
+    
     if([editingTextView.text isEqualToString:@""]) {
         editingTextView.text = taskPrompt;
         self.textIsEmpty = YES;
@@ -252,6 +288,8 @@
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range 
  replacementText:(NSString *)text
 {
+    
+    [self animateTextView:NO];
     //Hide keyboard when done
     if ([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
