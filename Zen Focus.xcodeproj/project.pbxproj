@@ -22,6 +22,7 @@
 		B429F01F1488A4E4009C3AF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B429F01D1488A4E4009C3AF3 /* InfoPlist.strings */; };
 		B429F0221488A4E4009C3AF3 /* Zen_FocusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B429F0211488A4E4009C3AF3 /* Zen_FocusTests.m */; };
 		B429F02C1488A5F8009C3AF3 /* zen-wallpaper-7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B429F02B1488A5F8009C3AF3 /* zen-wallpaper-7.jpg */; };
+		F125506614BD1C6F003B9F5A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F125506514BD1C6F003B9F5A /* Settings.bundle */; };
 		F12AD7EB14BA0C6900CFCDAA /* Bonsai57.png in Resources */ = {isa = PBXBuildFile; fileRef = F12AD7EA14BA0C6900CFCDAA /* Bonsai57.png */; };
 		F165698614AF9A2B000B2C63 /* better.png in Resources */ = {isa = PBXBuildFile; fileRef = F165698514AF9A2B000B2C63 /* better.png */; };
 		F165698914AF9A33000B2C63 /* play2.png in Resources */ = {isa = PBXBuildFile; fileRef = F165698814AF9A33000B2C63 /* play2.png */; };
@@ -62,6 +63,7 @@
 		B429F0201488A4E4009C3AF3 /* Zen_FocusTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Zen_FocusTests.h; sourceTree = "<group>"; };
 		B429F0211488A4E4009C3AF3 /* Zen_FocusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zen_FocusTests.m; sourceTree = "<group>"; };
 		B429F02B1488A5F8009C3AF3 /* zen-wallpaper-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zen-wallpaper-7.jpg"; sourceTree = "<group>"; };
+		F125506514BD1C6F003B9F5A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		F12AD7EA14BA0C6900CFCDAA /* Bonsai57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bonsai57.png; sourceTree = "<group>"; };
 		F165698514AF9A2B000B2C63 /* better.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = better.png; path = "../../iPhone Dev/Zen/better.png"; sourceTree = "<group>"; };
 		F165698814AF9A33000B2C63 /* play2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play2.png; path = "../../iPhone Dev/Zen/play2.png"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		B429EFE41488A4E3009C3AF3 = {
 			isa = PBXGroup;
 			children = (
+				F125506514BD1C6F003B9F5A /* Settings.bundle */,
 				B429EFF91488A4E4009C3AF3 /* Zen Focus */,
 				B429F01A1488A4E4009C3AF3 /* Zen FocusTests */,
 				B429EFF21488A4E4009C3AF3 /* Frameworks */,
@@ -255,6 +258,7 @@
 				F1CF991814BA09CE00026FB1 /* Bonsai.png in Resources */,
 				F1CF992314BA0B4F00026FB1 /* Bonsai114.png in Resources */,
 				F12AD7EB14BA0C6900CFCDAA /* Bonsai57.png in Resources */,
+				F125506614BD1C6F003B9F5A /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

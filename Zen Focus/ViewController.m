@@ -277,6 +277,7 @@
 
 - (void)textViewDidEndEditing:(UITextView *)editingTextView{
     
+    [self animateTextView:NO];
     if([editingTextView.text isEqualToString:@""]) {
         editingTextView.text = taskPrompt;
         self.textIsEmpty = YES;
@@ -289,7 +290,6 @@
  replacementText:(NSString *)text
 {
     
-    [self animateTextView:NO];
     //Hide keyboard when done
     if ([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];

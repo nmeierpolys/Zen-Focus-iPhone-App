@@ -102,12 +102,12 @@
                                         <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25:00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="aH0-hz-p3T">
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" text="25:00" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="aH0-hz-p3T">
                                         <rect key="frame" x="80" y="5" width="73" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.53014605978260865" green="0.53014605978260865" blue="0.53014605978260865" alpha="0.85999999999999999" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="AppleGothic" family="AppleGothic" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="21"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
