@@ -140,6 +140,7 @@
         [self printFramePosition:self.titleView.frame withLabel:@"titleView portrait"];
         [self printFramePosition:self.viewControls.frame withLabel:@"viewControls portrait"];
         //Landscape
+        
         self.textTask.frame = CGRectMake(self.textTask.frame.origin.x, 
                                          self.textTask.frame.origin.y-40, 
                                          self.textTask.frame.size.width, 

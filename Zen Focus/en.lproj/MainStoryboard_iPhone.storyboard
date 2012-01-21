@@ -20,7 +20,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-713" y="-40"/>
+            <point key="canvasLocation" x="-545" y="-50"/>
         </scene>
         <scene sceneID="5">
             <objects>
@@ -135,7 +135,7 @@
                         <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" id="sr0-A8-RKq">
-                        <barButtonItem key="rightBarButtonItem" title="Hx" id="Olc-Vg-SQ2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="Olc-Vg-SQ2">
                             <connections>
                                 <segue destination="4jQ-Y5-kIB" kind="push" identifier="Show Task List" id="Iya-kQ-HUZ"/>
                             </connections>
@@ -209,7 +209,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="-129" y="539"/>
+            <point key="canvasLocation" x="271" y="-50"/>
         </scene>
     </scenes>
     <resources>
