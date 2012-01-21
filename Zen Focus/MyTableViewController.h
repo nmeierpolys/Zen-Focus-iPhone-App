@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
 @interface MyTableViewController : UITableViewController
+- (IBAction)btnClear:(id)sender;
 @property (nonatomic, strong) NSArray *tasks; //array of task strings
+@property (nonatomic, strong) ViewController *caller;
 @end

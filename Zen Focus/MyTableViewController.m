@@ -13,6 +13,7 @@
 @implementation MyTableViewController
 
 @synthesize tasks = _tasks;
+@synthesize caller = _caller;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -109,7 +110,7 @@
     cell.detailTextLabel.text = dateFormatted;
     
     if(task.completed)
-        cell.textLabel.text = [cell.textLabel.text stringByAppendingString:@" (Completed)"];
+        cell.detailTextLabel.text = [cell.detailTextLabel.text stringByAppendingString:@" - (Completed)"];
     
     return cell;
 }
@@ -166,4 +167,10 @@
      */
 }
 
+- (IBAction)btnClear:(id)sender {
+    self.tasks = [[NSArray alloc] init];
+    self.caller.tasks = [[NSArray alloc] init];
+    [self.tableView reloadData];
+    
+}
 @end

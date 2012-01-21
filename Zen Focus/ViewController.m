@@ -120,16 +120,30 @@
     return YES;
 }
 
+- (void)printFramePosition:(CGRect)frame withLabel:(NSString *)label
+{
+    NSString *output = [NSString stringWithFormat:@"(%.0f,%.0f,%.0f,%.0f)",
+                        frame.origin.x, 
+                        frame.origin.y-40, 
+                        frame.size.width, 
+                        frame.size.height-60];
+    NSLog(@"%@: %@",label,output);
+}
+
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
         toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
     {
+        [self printFramePosition:self.textTask.frame withLabel:@"textTask portrait"];
+        [self printFramePosition:self.imageBackground.frame withLabel:@"imageBackground portrait"];
+        [self printFramePosition:self.titleView.frame withLabel:@"titleView portrait"];
+        [self printFramePosition:self.viewControls.frame withLabel:@"viewControls portrait"];
         //Landscape
         self.textTask.frame = CGRectMake(self.textTask.frame.origin.x, 
                                          self.textTask.frame.origin.y-40, 
                                          self.textTask.frame.size.width, 
-                                         self.textTask.frame.size.height-40);
+                                         self.textTask.frame.size.height-60);
         
         self.imageBackground.frame = CGRectMake(self.imageBackground.frame.origin.x-85, 
                                                 self.imageBackground.frame.origin.y, 
@@ -146,16 +160,21 @@
     }
     else
     {
+        [self printFramePosition:self.textTask.frame withLabel:@"textTask landscape"];
+        [self printFramePosition:self.imageBackground.frame withLabel:@"imageBackground landscape"];
+        [self printFramePosition:self.titleView.frame withLabel:@"titleView landscape"];
+        [self printFramePosition:self.viewControls.frame withLabel:@"viewControls landscape"];
+        
         //Portrait
         self.textTask.frame = CGRectMake(self.textTask.frame.origin.x, 
                                          self.textTask.frame.origin.y+40, 
                                          self.textTask.frame.size.width, 
-                                         self.textTask.frame.size.height+40);
+                                         self.textTask.frame.size.height+60);
         
         self.imageBackground.frame = CGRectMake(self.imageBackground.frame.origin.x+85, 
                                                 self.imageBackground.frame.origin.y, 
                                                 536, 
-                                                525);
+                                                500);
         self.titleView.frame = CGRectMake(self.titleView.frame.origin.x, 
                                           self.titleView.frame.origin.y+25, 
                                           self.titleView.frame.size.width, 
@@ -342,7 +361,14 @@
 {
     if([segue.identifier isEqualToString:@"Show Task List"])
     {   
-        [segue.destinationViewController setTasks:self.tasks]; 
+        NSMutableArray * copy = [NSMutableArray arrayWithCapacity:[self.tasks count]];
+        
+        for(int i = 0; i < [self.tasks count]; i++) {
+            [copy addObject:[self.tasks objectAtIndex:[self.tasks count] - i - 1]];
+        }
+        
+        [segue.destinationViewController setTasks:copy]; 
+        [segue.destinationViewController setCaller:self];
     }
 }
 
