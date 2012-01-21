@@ -29,6 +29,8 @@
 		F1BDFAB114B1298400633748 /* zen-wallpaper-008.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F1BDFAB014B1298400633748 /* zen-wallpaper-008.jpg */; };
 		F1CF991814BA09CE00026FB1 /* Bonsai.png in Resources */ = {isa = PBXBuildFile; fileRef = F1CF991714BA09CE00026FB1 /* Bonsai.png */; };
 		F1CF992314BA0B4F00026FB1 /* Bonsai114.png in Resources */ = {isa = PBXBuildFile; fileRef = F1CF992214BA0B4F00026FB1 /* Bonsai114.png */; };
+		F1E5FF9B14CA932C005C7F93 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E5FF9A14CA932C005C7F93 /* MyTableViewController.m */; };
+		F1E5FF9E14CAB098005C7F93 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E5FF9D14CAB098005C7F93 /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,10 @@
 		F1BDFAB014B1298400633748 /* zen-wallpaper-008.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zen-wallpaper-008.jpg"; sourceTree = "<group>"; };
 		F1CF991714BA09CE00026FB1 /* Bonsai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bonsai.png; sourceTree = "<group>"; };
 		F1CF992214BA0B4F00026FB1 /* Bonsai114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bonsai114.png; path = ../Bonsai114.png; sourceTree = "<group>"; };
+		F1E5FF9914CA932C005C7F93 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		F1E5FF9A14CA932C005C7F93 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		F1E5FF9C14CAB098005C7F93 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		F1E5FF9D14CAB098005C7F93 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,9 +139,13 @@
 				B429F0021488A4E4009C3AF3 /* AppDelegate.h */,
 				B429F0031488A4E4009C3AF3 /* AppDelegate.m */,
 				B429F0051488A4E4009C3AF3 /* MainStoryboard_iPhone.storyboard */,
+				F1E5FF9914CA932C005C7F93 /* MyTableViewController.h */,
+				F1E5FF9A14CA932C005C7F93 /* MyTableViewController.m */,
 				B429F0081488A4E4009C3AF3 /* MainStoryboard_iPad.storyboard */,
 				B429F00B1488A4E4009C3AF3 /* ViewController.h */,
 				B429F00C1488A4E4009C3AF3 /* ViewController.m */,
+				F1E5FF9C14CAB098005C7F93 /* Task.h */,
+				F1E5FF9D14CAB098005C7F93 /* Task.m */,
 				B429EFFA1488A4E4009C3AF3 /* Supporting Files */,
 			);
 			path = "Zen Focus";
@@ -296,6 +306,8 @@
 				B429F0001488A4E4009C3AF3 /* main.m in Sources */,
 				B429F0041488A4E4009C3AF3 /* AppDelegate.m in Sources */,
 				B429F00D1488A4E4009C3AF3 /* ViewController.m in Sources */,
+				F1E5FF9B14CA932C005C7F93 /* MyTableViewController.m in Sources */,
+				F1E5FF9E14CAB098005C7F93 /* Task.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

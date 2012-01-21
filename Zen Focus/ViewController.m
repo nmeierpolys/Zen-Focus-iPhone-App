@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "MyTableViewController.h"
+#import "Task.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface ViewController()
@@ -24,6 +26,8 @@
 @synthesize playLabel = _playLabel;
 @synthesize titleView = _titleView;
 @synthesize textTask = _textTask;
+@synthesize tasks = _tasks;
+@synthesize MainView = _MainView;
 
 @synthesize textIsEmpty = _textIsEmpty;
 
@@ -58,6 +62,9 @@
     
     [self fadeCaptionsIn];
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval: 3.0 target:self selector:@selector(fadeCaptionsOutTimer:) userInfo:nil repeats: NO];
+    
+    
+    self.tasks = [[NSArray alloc] init];
 }
 - (void)viewDidUnload
 {
@@ -69,6 +76,7 @@
     [self setRestartLabel:nil];
     [self setPlayLabel:nil];
     [self setTitleView:nil];
+    [self setMainView:nil];
     [super viewDidUnload];
 }
 - (void)viewWillAppear:(BOOL)animated{
@@ -202,10 +210,11 @@
         numMinutes = 25;
     
     interval = numMinutes * 60;
+    remainingTime = interval;
     self.textTime.text = [self timeTextFromInterval:interval];
 }
 
-- (void)updateTimeField {
+- (void)updateTimeField { 
     if(!updateTimer)
         return;
     
@@ -213,6 +222,7 @@
     {
         self.textTime.text = [self timeTextFromInterval:0];
         updateTimer = NO;
+        [self addCurrentTaskComponentsToArray:YES];
         return;
     }
     
@@ -232,7 +242,12 @@
 - (IBAction)buttonStart:(id)sender {  
     if(!updateTimer){  
         
-        //Starting the timer - add a local alert notification for the end time
+        
+        //Reset if the last one expired already (remainingTime == 0)
+        if(remainingTime == 0)
+            remainingTime = interval;
+        
+        //Add a local alert notification for the end time
         UILocalNotification *localNotification = [[UILocalNotification alloc] init];
         NSDate *fireDate = [[NSDate alloc] initWithTimeIntervalSinceNow:remainingTime];
         
@@ -251,6 +266,8 @@
 }
 
 - (IBAction)buttonReset:(id)sender {
+    [self addCurrentTaskComponentsToArray:NO];
+    
     remainingTime = interval;
     self.textTime.text = [self timeTextFromInterval:interval];
     updateTimer = NO;
@@ -296,6 +313,37 @@
         return FALSE;
     }
     return TRUE;
+}
+
+- (void)addTaskToArray:(Task *)task
+{
+    self.tasks = [self.tasks arrayByAddingObject:task];
+}
+
+
+- (void)addTaskComponentsToArray:(NSString *)title dateStarted:(NSDate *)dateStarted completed:(bool)completed
+{
+    Task *newTask = [[Task alloc] init];
+    
+    newTask.title = title;
+    newTask.dateStarted = dateStarted;
+    newTask.completed = completed; 
+    
+    [self addTaskToArray:newTask];
+}
+
+- (void)addCurrentTaskComponentsToArray:(bool)completed
+{
+    NSDate *now = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
+    [self addTaskComponentsToArray:self.textTask.text dateStarted:now completed:completed];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"Show Task List"])
+    {   
+        [segue.destinationViewController setTasks:self.tasks]; 
+    }
 }
 
 @end

@@ -22,7 +22,10 @@
      UIRemoteNotificationTypeSound];
     
     // Override point for customization after application launch.
-    rootViewController = (ViewController *)[_window rootViewController];
+    //rootViewController = (ViewController *)[_window rootViewController];
+    
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    rootViewController = (ViewController *)[navigationController topViewController];
     return YES;
 }
 

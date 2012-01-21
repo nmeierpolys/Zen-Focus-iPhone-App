@@ -28,6 +28,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *restartLabel;
 @property (weak, nonatomic) IBOutlet UILabel *playLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleView;
+@property (nonatomic, strong) NSArray *tasks;
+@property (weak, nonatomic) IBOutlet UIView *MainView;
 
 - (IBAction)buttonReset:(id)sender;
 - (IBAction)buttonStart:(id)sender;
@@ -41,7 +43,8 @@
 - (void)fadeCaptionsOut;
 - (void)fadeCaptionsOutTimer;
 - (void)animateTextView:(bool)up;
-
+- (void)addTaskComponentsToArray:(NSString *)title dateStarted:(NSDate *)dateStarted completed:(bool)completed;
 - (NSString *)timeTextFromInterval:(NSTimeInterval)interval;
+- (void)addCurrentTaskComponentsToArray:(bool)completed;
 
 @end
