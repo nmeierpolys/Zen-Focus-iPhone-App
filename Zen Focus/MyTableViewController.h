@@ -11,6 +11,8 @@
 
 @interface MyTableViewController : UITableViewController
 - (IBAction)btnClear:(id)sender;
+- (NSString *)plistPath;
+    
 @property (nonatomic, strong) NSArray *tasks; //array of task strings
 @property (nonatomic, strong) ViewController *caller;
 @end

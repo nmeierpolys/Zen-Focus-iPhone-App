@@ -167,10 +167,21 @@
      */
 }
 
+- (NSString *)plistPath{
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
+    NSString *plistFile = @"ZenFocusTasks";
+    
+    return [documentsDirectory stringByAppendingPathComponent:plistFile];
+}
+
 - (IBAction)btnClear:(id)sender {
+    NSArray *plistArr = [[NSArray alloc] init];
+    NSString *plistPath = [self plistPath];
+    [plistArr writeToFile:plistPath atomically:YES];
+    
     self.tasks = [[NSArray alloc] init];
     self.caller.tasks = [[NSArray alloc] init];
     [self.tableView reloadData];
-    
 }
 @end

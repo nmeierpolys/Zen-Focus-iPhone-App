@@ -65,9 +65,50 @@
     
     
     self.tasks = [[NSArray alloc] init];
+    
+    [self loadPlistEntries];
 }
+
+- (NSString *)plistPath{
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
+    NSString *plistFile = @"ZenFocusTasks";
+    
+    return [documentsDirectory stringByAppendingPathComponent:plistFile];
+}
+
+- (void)loadPlistEntries{
+    
+    //Initialize    
+    NSArray *plistArr = [[NSArray alloc] init];
+    
+    //Plist document path
+    NSString *plistPath = [self plistPath];
+	
+    //Populate array from plist
+    if ([[NSFileManager defaultManager] fileExistsAtPath:plistPath]){
+        plistArr = [NSArray arrayWithContentsOfFile:plistPath];
+	} else {;
+        return;
+	}
+    
+    //Look through plistArr and set up table.
+    NSUInteger count = [plistArr count];
+    for (NSUInteger i = 0; i < count; i++) {
+        NSDictionary *taskInfo = (NSDictionary *)[plistArr objectAtIndex:i];
+        
+        NSString *taskTitle = [taskInfo objectForKey:@"taskTitle"];
+        NSDate *dateStarted = [taskInfo objectForKey:@"taskDateStarted"];
+        NSNumber *completed = [taskInfo objectForKey:@"taskCompleted"];
+        bool isCompleted = [completed boolValue];
+        
+        [self addTaskComponentsToArray:taskTitle dateStarted:dateStarted completed:isCompleted];
+
+    }
+}
+
 - (void)viewDidUnload
-{
+{    
     [self setTextTask:nil];
     [self setTextTime:nil];
     [self setTaskView:nil];
@@ -127,7 +168,6 @@
                         frame.origin.y-40, 
                         frame.size.width, 
                         frame.size.height-60];
-    NSLog(@"%@: %@",label,output);
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
@@ -352,10 +392,47 @@
     [self addTaskToArray:newTask];
 }
 
+- (void)addTaskComponentsToPlist:(NSString *)title dateStarted:(NSDate *)dateStarted completed:(bool)completed
+{
+    Task *task = [[Task alloc] init];
+    
+    task.title = title;
+    task.dateStarted = dateStarted;
+    task.completed = completed; 
+    
+    
+    //Initialize    
+    NSArray *plistArr = [[NSArray alloc] init];
+    
+    //Plist document path
+    NSString *plistPath = [self plistPath];
+	
+    //Populate array from plist
+    if ([[NSFileManager defaultManager] fileExistsAtPath:plistPath]){
+        plistArr = [NSArray arrayWithContentsOfFile:plistPath];
+	}
+    
+    if(task != nil){
+        NSNumber *completed = [NSNumber numberWithBool:task.completed];
+        NSDictionary *taskInfo = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                  task.title,@"taskTitle",
+                                  task.dateStarted,@"taskDateStarted",
+                                  completed,@"taskCompleted", 
+                                  nil];
+        plistArr = [plistArr arrayByAddingObject:taskInfo];
+    }
+    
+    //Write to plist
+    bool successfullySaved = [plistArr writeToFile:plistPath atomically:YES];
+    NSLog(@"Successfully saved: %d",successfullySaved);
+}
+
 - (void)addCurrentTaskComponentsToArray:(bool)completed
 {
     NSDate *now = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
     [self addTaskComponentsToArray:self.textTask.text dateStarted:now completed:completed];
+    [self addTaskComponentsToPlist:self.textTask.text dateStarted:now completed:completed];
+
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

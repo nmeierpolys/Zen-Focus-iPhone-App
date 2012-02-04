@@ -46,5 +46,9 @@
 - (void)addTaskComponentsToArray:(NSString *)title dateStarted:(NSDate *)dateStarted completed:(bool)completed;
 - (NSString *)timeTextFromInterval:(NSTimeInterval)interval;
 - (void)addCurrentTaskComponentsToArray:(bool)completed;
+- (void)loadPlistEntries;
+- (void)savePlistEntries;
+- (NSString *)plistPath;
+- (void)clearPlistEntries;
 
 @end
