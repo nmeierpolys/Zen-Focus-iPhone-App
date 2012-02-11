@@ -217,31 +217,6 @@
         <image name="play2.png" width="465" height="500"/>
         <image name="zen-wallpaper-008.jpg" width="1280" height="1024"/>
     </resources>
-    <classes>
-        <class className="MyTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="btnClear:"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buttonInfo:"/>
-                <relationship kind="action" name="buttonReset:"/>
-                <relationship kind="action" name="buttonStart:"/>
-                <relationship kind="outlet" name="MainView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="imageBackground" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="playLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="restartLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="taskView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="textTask" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="textTime" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="titleView" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="viewControls" candidateClass="UIView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

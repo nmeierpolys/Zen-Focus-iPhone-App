@@ -168,6 +168,7 @@
                         frame.origin.y-40, 
                         frame.size.width, 
                         frame.size.height-60];
+    NSLog([label stringByAppendingString:output]);
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
@@ -175,55 +176,29 @@
     if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
         toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
     {
-        [self printFramePosition:self.textTask.frame withLabel:@"textTask portrait"];
-        [self printFramePosition:self.imageBackground.frame withLabel:@"imageBackground portrait"];
-        [self printFramePosition:self.titleView.frame withLabel:@"titleView portrait"];
-        [self printFramePosition:self.viewControls.frame withLabel:@"viewControls portrait"];
         //Landscape
         
-        self.textTask.frame = CGRectMake(self.textTask.frame.origin.x, 
-                                         self.textTask.frame.origin.y-40, 
-                                         self.textTask.frame.size.width, 
-                                         self.textTask.frame.size.height-60);
-        
-        self.imageBackground.frame = CGRectMake(self.imageBackground.frame.origin.x-85, 
-                                                self.imageBackground.frame.origin.y, 
-                                                775, 
-                                                315);
-        self.titleView.frame = CGRectMake(self.titleView.frame.origin.x, 
-                                          self.titleView.frame.origin.y-25, 
-                                          self.titleView.frame.size.width, 
-                                          self.titleView.frame.size.height);
-        self.viewControls.frame = CGRectMake(self.viewControls.frame.origin.x, 
-                                             self.viewControls.frame.origin.y+5, 
-                                             self.viewControls.frame.size.width, 
-                                             self.viewControls.frame.size.height);
+        int textYPos = 85;
+        if(keyboardUp)
+            textYPos -=40;
+            
+        self.textTask.frame = CGRectMake(20,textYPos,440,90);
+        self.imageBackground.frame = CGRectMake(-295,-45,775,335);
+        self.titleView.frame = CGRectMake(101,25,118,26);
+        self.viewControls.frame = CGRectMake(124,205,233,2);
     }
     else
     {
-        [self printFramePosition:self.textTask.frame withLabel:@"textTask landscape"];
-        [self printFramePosition:self.imageBackground.frame withLabel:@"imageBackground landscape"];
-        [self printFramePosition:self.titleView.frame withLabel:@"titleView landscape"];
-        [self printFramePosition:self.viewControls.frame withLabel:@"viewControls landscape"];
-        
         //Portrait
-        self.textTask.frame = CGRectMake(self.textTask.frame.origin.x, 
-                                         self.textTask.frame.origin.y+40, 
-                                         self.textTask.frame.size.width, 
-                                         self.textTask.frame.size.height+60);
         
-        self.imageBackground.frame = CGRectMake(self.imageBackground.frame.origin.x+85, 
-                                                self.imageBackground.frame.origin.y, 
-                                                536, 
-                                                500);
-        self.titleView.frame = CGRectMake(self.titleView.frame.origin.x, 
-                                          self.titleView.frame.origin.y+25, 
-                                          self.titleView.frame.size.width, 
-                                          self.titleView.frame.size.height);
-        self.viewControls.frame = CGRectMake(self.viewControls.frame.origin.x, 
-                                             self.viewControls.frame.origin.y-5, 
-                                             self.viewControls.frame.size.width, 
-                                             self.viewControls.frame.size.height);
+        int textYPos = 125;
+        if(keyboardUp)
+            textYPos -=40;
+        
+        self.textTask.frame = CGRectMake(20,textYPos,280,150);
+        self.imageBackground.frame = CGRectMake(-210,-45,536,520);
+        self.titleView.frame = CGRectMake(101,50,114,26);
+        self.viewControls.frame = CGRectMake(44,350,233,2);
     }
 }
 
@@ -248,10 +223,13 @@
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.2];
     [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-    if(up)
+    if(up){
+        keyboardUp = true;
         self.textTask.transform = CGAffineTransformMakeTranslation (0, -40);
-    else
+    } else {
+        keyboardUp = false;
         self.textTask.transform = CGAffineTransformMakeTranslation (0, 0);
+    }
     
     [UIView commitAnimations];
 }
