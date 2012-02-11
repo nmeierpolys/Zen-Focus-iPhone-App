@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350076812.442549"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "462"
-         endingLineNumber = "462">
+         startingLineNumber = "440"
+         endingLineNumber = "440">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -21,11 +21,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350076812.442549"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "456"
-         endingLineNumber = "456">
+         startingLineNumber = "434"
+         endingLineNumber = "434">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -33,11 +33,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350076812.442549"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "458"
-         endingLineNumber = "458">
+         startingLineNumber = "436"
+         endingLineNumber = "436">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -45,11 +45,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350076812.442549"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "470"
-         endingLineNumber = "470">
+         startingLineNumber = "448"
+         endingLineNumber = "448">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -57,11 +57,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350076812.442549"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "457"
-         endingLineNumber = "457">
+         startingLineNumber = "435"
+         endingLineNumber = "435">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -69,11 +69,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350077807.775162"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "374"
-         endingLineNumber = "374"
+         startingLineNumber = "352"
+         endingLineNumber = "352"
          landmarkName = "-textView:shouldChangeTextInRange:replacementText:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -83,11 +83,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350077807.775162"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "315"
-         endingLineNumber = "315"
+         startingLineNumber = "293"
+         endingLineNumber = "293"
          landmarkName = "-buttonStart:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -97,11 +97,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350077807.775162"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "241"
-         endingLineNumber = "241"
+         startingLineNumber = "216"
+         endingLineNumber = "216"
          landmarkName = "-fadeCaptionsIn"
          landmarkType = "5">
       </FileBreakpoint>
@@ -151,11 +151,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350077807.775162"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "363"
-         endingLineNumber = "363"
+         startingLineNumber = "341"
+         endingLineNumber = "341"
          landmarkName = "-textViewDidEndEditing:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -165,11 +165,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350077807.775162"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "360"
-         endingLineNumber = "360"
+         startingLineNumber = "338"
+         endingLineNumber = "338"
          landmarkName = "-textViewDidEndEditing:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -249,11 +249,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350077807.775162"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "268"
-         endingLineNumber = "268"
+         startingLineNumber = "246"
+         endingLineNumber = "246"
          landmarkName = "-loadDefaults"
          landmarkType = "5">
       </FileBreakpoint>
@@ -263,11 +263,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350077807.775162"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "380"
-         endingLineNumber = "380"
+         startingLineNumber = "358"
+         endingLineNumber = "358"
          landmarkName = "-addTaskToArray:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -361,11 +361,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350076915.041588"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "415"
-         endingLineNumber = "415"
+         startingLineNumber = "393"
+         endingLineNumber = "393"
          landmarkName = "-addTaskComponentsToPlist:dateStarted:completed:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -389,11 +389,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350077807.775162"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "397"
-         endingLineNumber = "397"
+         startingLineNumber = "375"
+         endingLineNumber = "375"
          landmarkName = "-addTaskComponentsToPlist:dateStarted:completed:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -403,11 +403,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350076812.442549"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "432"
-         endingLineNumber = "432"
+         startingLineNumber = "410"
+         endingLineNumber = "410"
          landmarkName = "-addCurrentTaskComponentsToArray:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -431,11 +431,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350077807.775162"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "303"
-         endingLineNumber = "303"
+         startingLineNumber = "281"
+         endingLineNumber = "281"
          landmarkName = "-buttonStart:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -445,25 +445,25 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350077807.775162"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "329"
-         endingLineNumber = "329"
+         startingLineNumber = "307"
+         endingLineNumber = "307"
          landmarkName = "-buttonReset:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Zen Focus/ViewController.m"
-         timestampString = "350077807.775162"
+         timestampString = "350687926.059668"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "337"
-         endingLineNumber = "337"
+         startingLineNumber = "315"
+         endingLineNumber = "315"
          landmarkName = "-buttonInfo:"
          landmarkType = "5">
       </FileBreakpoint>
