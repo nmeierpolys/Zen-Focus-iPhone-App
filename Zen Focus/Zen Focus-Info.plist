@@ -10,8 +10,9 @@
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>Bonsai57.png</string>
-		<string>Bonsai114.png</string>
+		<string>BonsaiShadow57.png</string>
+		<string>BonsaiShadow114.png</string>
+		<string>BonsaiShadow72.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
@@ -19,15 +20,16 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>Bonsai57.png</string>
-				<string>Bonsai114.png</string>
+				<string>BonsaiShadow57.png</string>
+				<string>BonsaiShadow114.png</string>
+				<string>BonsaiShadow72.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<false/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>NMM-Studios.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.thanscorner.zenfocus</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
