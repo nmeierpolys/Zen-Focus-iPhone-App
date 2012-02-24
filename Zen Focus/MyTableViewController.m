@@ -1,4 +1,4 @@
-//
+
 //  MyTableViewController.m
 //  Zen Focus
 //
@@ -176,12 +176,30 @@
 }
 
 - (IBAction)btnClear:(id)sender {
-    NSArray *plistArr = [[NSArray alloc] init];
-    NSString *plistPath = [self plistPath];
-    [plistArr writeToFile:plistPath atomically:YES];
+    if(self.tasks.count < 1)
+        return;
     
-    self.tasks = [[NSArray alloc] init];
-    self.caller.tasks = [[NSArray alloc] init];
-    [self.tableView reloadData];
+    UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"Clearing Task History" message:@"All tasks will be deleted. Are you sure?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes",nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    
+    if([title isEqualToString:@"Yes"])
+    {
+        NSArray *plistArr = [[NSArray alloc] init];
+        NSString *plistPath = [self plistPath];
+        [plistArr writeToFile:plistPath atomically:YES];
+        
+        self.tasks = [[NSArray alloc] init];
+        self.caller.tasks = [[NSArray alloc] init];
+        [self.tableView reloadData];
+    }
+    else if([title isEqualToString:@"No"])
+    {
+        //Do nothing
+    }   
 }
 @end

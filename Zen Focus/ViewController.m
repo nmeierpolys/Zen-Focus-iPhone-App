@@ -161,16 +161,6 @@
     return YES;
 }
 
-- (void)printFramePosition:(CGRect)frame withLabel:(NSString *)label
-{
-    NSString *output = [NSString stringWithFormat:@"(%.0f,%.0f,%.0f,%.0f)",
-                        frame.origin.x, 
-                        frame.origin.y-40, 
-                        frame.size.width, 
-                        frame.size.height-60];
-    NSLog([label stringByAppendingString:output]);
-}
-
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
@@ -402,7 +392,6 @@
     
     //Write to plist
     bool successfullySaved = [plistArr writeToFile:plistPath atomically:YES];
-    NSLog(@"Successfully saved: %d",successfullySaved);
 }
 
 - (void)addCurrentTaskComponentsToArray:(bool)completed
