@@ -231,15 +231,28 @@
 
 // ======== Real logic methods ========
 - (void) loadDefaults {
+    
+    [NSUserDefaults resetStandardUserDefaults];
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     double numMinutes = [[defaults stringForKey:@"duration"] doubleValue];
     if(numMinutes == 0)
         numMinutes = 25;
     
-    interval = numMinutes * 60;
-    remainingTime = interval;
-    self.textTime.text = [self timeTextFromInterval:interval];
+    int newInterval = numMinutes * 60;
+    
+    //If user changed the duration setting, cancel the current timer
+    if(interval != newInterval)
+    {
+        updateTimer = false;
+    
+        interval = newInterval;
+        remainingTime = interval;
+        
+        self.textTime.text = [self timeTextFromInterval:interval];
+    }
+    
 }
 
 - (void)updateTimeField { 
