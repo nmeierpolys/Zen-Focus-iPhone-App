@@ -175,7 +175,7 @@
         self.textTask.frame = CGRectMake(20,textYPos,440,90);
         self.imageBackground.frame = CGRectMake(-295,-45,775,335);
         self.titleView.frame = CGRectMake(101,25,118,26);
-        self.viewControls.frame = CGRectMake(124,205,233,2);
+        //self.viewControls.frame = CGRectMake(124,205,233,2);
     }
     else
     {
@@ -188,7 +188,7 @@
         self.textTask.frame = CGRectMake(20,textYPos,280,150);
         self.imageBackground.frame = CGRectMake(-210,-45,536,520);
         self.titleView.frame = CGRectMake(101,50,114,26);
-        self.viewControls.frame = CGRectMake(44,350,233,2);
+        //self.viewControls.frame = CGRectMake(44,350,233,2);
     }
 }
 

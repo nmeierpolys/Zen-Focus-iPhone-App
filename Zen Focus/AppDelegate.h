@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
+#import "Wrapper.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>{
     
     ViewController *rootViewController;
+    Wrapper *engine;
 }
 
 @property (strong, nonatomic) UIWindow *window;
+
+- (void)sendInfoToAPI;
 
 @end

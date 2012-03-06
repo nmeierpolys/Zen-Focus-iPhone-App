@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "Wrapper.h"
+#import "APIWorker.h"
 
 @implementation AppDelegate
 
@@ -26,6 +28,10 @@
     
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     rootViewController = (ViewController *)[navigationController topViewController];
+    
+    APIWorker *APIobj = [[APIWorker alloc] init];
+    [APIobj sendIDInfo:@"ZenFocus"];
+    
     return YES;
 }
 
@@ -40,6 +46,9 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    
+    APIWorker *APIobj = [[APIWorker alloc] init];
+    [APIobj sendIDInfo:@"ZenFocus"];
     [rootViewController enteringForeground];
 }
 
