@@ -25,15 +25,15 @@
     
     // Override point for customization after application launch.
     //rootViewController = (ViewController *)[_window rootViewController];
-    
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+        
+    UINavigationController *navigationController = (UINavigationController *)_window.rootViewController;
     rootViewController = (ViewController *)[navigationController topViewController];
     
     APIWorker *APIobj = [[APIWorker alloc] init];
     [APIobj sendIDInfo:@"ZenFocus"];
     
     return YES;
-}
+} 
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
