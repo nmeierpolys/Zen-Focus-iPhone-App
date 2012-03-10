@@ -24,8 +24,6 @@
 }
 
 - (IBAction)launch:(id)sender;
-- (IBAction)chooseMethod:(id)sender;
-- (void)pickerDone;
 
 @end
 

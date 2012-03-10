@@ -178,7 +178,7 @@
         {
             if ([delegate respondsToSelector:@selector(wrapper:didFailWithError:)])
             {
-                NSMutableDictionary* info = [NSMutableDictionary dictionaryWithObject:[request URL] forKey:NSErrorFailingURLStringKey];
+                NSMutableDictionary* info = [NSMutableDictionary dictionaryWithObject:[request URL] forKey:NSURLErrorFailingURLStringErrorKey];
                 [info setObject:@"Could not open connection" forKey:NSLocalizedDescriptionKey];
                 NSError* error = [NSError errorWithDomain:@"Wrapper" code:1 userInfo:info];
                 [delegate wrapper:self didFailWithError:error];

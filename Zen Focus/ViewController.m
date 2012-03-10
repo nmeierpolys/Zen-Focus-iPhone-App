@@ -19,25 +19,24 @@
 
 @implementation ViewController
 @synthesize taskView = _taskView;
+@synthesize textTask = _textTask;
 @synthesize textTime = _textTime;
 @synthesize imageBackground = _imageBackground;
 @synthesize viewControls = _viewControls;
 @synthesize restartLabel = _restartLabel;
 @synthesize playLabel = _playLabel;
 @synthesize titleView = _titleView;
-@synthesize textTask = _textTask;
 @synthesize tasks = _tasks;
 @synthesize MainView = _MainView;
-
 @synthesize textIsEmpty = _textIsEmpty;
+
+#pragma mark - View lifecycle
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
 }
-
-#pragma mark - View lifecycle
-
 
 // ======== View events ========
 
@@ -61,13 +60,99 @@
     self.textTask.layer.borderWidth = 1.0f;
     
     [self fadeCaptionsIn];
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval: 3.0 target:self selector:@selector(fadeCaptionsOutTimer:) userInfo:nil repeats: NO];
+    [NSTimer scheduledTimerWithTimeInterval: 3.0 target:self selector:@selector(fadeCaptionsOutTimer:) userInfo:nil repeats: NO];
     
     
     self.tasks = [[NSArray alloc] init];
     
     [self loadPlistEntries];
 }
+
+- (void)viewDidUnload
+{    
+    [self setTextTask:nil];
+    [self setTextTime:nil];
+    [self setTaskView:nil];
+    [self setImageBackground:nil];
+    [self setViewControls:nil];
+    [self setRestartLabel:nil];
+    [self setPlayLabel:nil];
+    [self setTitleView:nil];
+    [self setMainView:nil];
+    [super viewDidUnload];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+	[super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+	[super viewDidDisappear:animated];
+}
+
+- (void)enteringBackground{
+    if(!updateTimer)
+        return;
+    
+    //cache instant when the task should expire
+    endingInstant = [[NSDate alloc] initWithTimeIntervalSinceNow:remainingTime];
+    
+}
+
+- (void)enteringForeground{
+    [self loadDefaults];
+    
+    if(!updateTimer)
+        return;
+    //Test change for github - 2
+    //restore instant when the task should expire
+    remainingTime = [endingInstant timeIntervalSinceNow];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
+        toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
+    {
+        //Landscape
+        
+        int textYPos = 85;
+        if(keyboardUp)
+            textYPos -=40;
+        
+        self.textTask.frame = CGRectMake(20,textYPos,440,90);
+        self.imageBackground.frame = CGRectMake(-295,-45,775,335);
+        self.titleView.frame = CGRectMake(101,25,118,26);
+        //self.viewControls.frame = CGRectMake(124,205,233,2);
+    }
+    else
+    {
+        //Portrait
+        
+        int textYPos = 125;
+        if(keyboardUp)
+            textYPos -=40;
+        
+        self.textTask.frame = CGRectMake(20,textYPos,280,150);
+        self.imageBackground.frame = CGRectMake(-210,-45,536,520);
+        self.titleView.frame = CGRectMake(101,50,114,26);
+        //self.viewControls.frame = CGRectMake(44,350,233,2);
+    }
+}
+
 
 - (NSString *)plistPath{
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
@@ -104,91 +189,6 @@
         
         [self addTaskComponentsToArray:taskTitle dateStarted:dateStarted completed:isCompleted];
 
-    }
-}
-
-- (void)viewDidUnload
-{    
-    [self setTextTask:nil];
-    [self setTextTime:nil];
-    [self setTaskView:nil];
-    [self setImageBackground:nil];
-    [self setViewControls:nil];
-    [self setRestartLabel:nil];
-    [self setPlayLabel:nil];
-    [self setTitleView:nil];
-    [self setMainView:nil];
-    [super viewDidUnload];
-}
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated{
-	[super viewDidDisappear:animated];
-}
-
-
-- (void)enteringBackground{
-    if(!updateTimer)
-        return;
-    
-    //cache instant when the task should expire
-    endingInstant = [[NSDate alloc] initWithTimeIntervalSinceNow:remainingTime];
-    
-}
-
-- (void)enteringForeground{
-    [self loadDefaults];
-    
-    if(!updateTimer)
-        return;
-    //Test change for github - 2
-    //restore instant when the task should expire
-    remainingTime = [endingInstant timeIntervalSinceNow];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
-
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
-        toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
-    {
-        //Landscape
-        
-        int textYPos = 85;
-        if(keyboardUp)
-            textYPos -=40;
-            
-        self.textTask.frame = CGRectMake(20,textYPos,440,90);
-        self.imageBackground.frame = CGRectMake(-295,-45,775,335);
-        self.titleView.frame = CGRectMake(101,25,118,26);
-        //self.viewControls.frame = CGRectMake(124,205,233,2);
-    }
-    else
-    {
-        //Portrait
-        
-        int textYPos = 125;
-        if(keyboardUp)
-            textYPos -=40;
-        
-        self.textTask.frame = CGRectMake(20,textYPos,280,150);
-        self.imageBackground.frame = CGRectMake(-210,-45,536,520);
-        self.titleView.frame = CGRectMake(101,50,114,26);
-        //self.viewControls.frame = CGRectMake(44,350,233,2);
     }
 }
 
@@ -318,7 +318,7 @@
     UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"Zen Focus" message:@"Create a task and get to it. It's as simple as that." delegate:self cancelButtonTitle:@"Got it" otherButtonTitles:nil,nil];
     [self fadeCaptionsIn];
     [alert show];
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval: 3.0 target:self selector:@selector(fadeCaptionsOutTimer:) userInfo:nil repeats: NO];
+    [NSTimer scheduledTimerWithTimeInterval: 3.0 target:self selector:@selector(fadeCaptionsOutTimer:) userInfo:nil repeats: NO];
 }
 
 
@@ -405,6 +405,8 @@
     
     //Write to plist
     bool successfullySaved = [plistArr writeToFile:plistPath atomically:YES];
+    if(!successfullySaved)
+        NSLog(@"Save failed");
 }
 
 - (void)addCurrentTaskComponentsToArray:(bool)completed
