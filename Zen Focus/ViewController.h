@@ -13,6 +13,7 @@
     NSString *taskPrompt;
     bool updateTimer;
     bool keyboardUp;
+    bool useSound;
     
     NSTimeInterval remainingTime;
     NSTimeInterval interval;

@@ -16,6 +16,8 @@
     Wrapper *engine;
 }
 
+void uncaughtExceptionHandler(NSException *exception);
+
 @property (strong, nonatomic) UIWindow *window;
 
 @end

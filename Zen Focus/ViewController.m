@@ -240,6 +240,8 @@
     if(numMinutes == 0)
         numMinutes = 25;
     
+    useSound = [[defaults stringForKey:@"useSound"] boolValue];
+    
     int newInterval = numMinutes * 60;
     
     //If user changed the duration setting, cancel the current timer
@@ -294,6 +296,8 @@
         
         localNotification.fireDate = fireDate;
         localNotification.alertBody = [NSString stringWithFormat:@"Task: %@\nTime's up, take a break",   self.textTask.text];
+        if(useSound)
+            localNotification.soundName = @"ding.wav";
         [[UIApplication sharedApplication] scheduleLocalNotification:localNotification]; 
         
     } else {

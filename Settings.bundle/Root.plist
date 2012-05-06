@@ -6,9 +6,19 @@
 	<array>
 		<dict>
 			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Play Sound</string>
+			<key>Key</key>
+			<string>useSound</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
-			<string>Task length</string>
+			<string>Task length (minutes)</string>
 			<key>Key</key>
 			<string>duration</string>
 			<key>KeyboardType</key>
